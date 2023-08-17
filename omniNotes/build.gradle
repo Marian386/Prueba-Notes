@@ -208,6 +208,12 @@ dependencies {
     alphaImplementation 'io.nlopez.smartlocation:library:3.2.4'
     fossImplementation 'com.github.federicoiosue:smart-location-lib:3.2.6'
     fossImplementation 'com.jakewharton.timber:timber:4.5.1'
+
+    
+    //Nuevo 
+    def appCenterSdkVersion = '4.4.5'
+    implementation "com.microsoft.appcenter:appcenter-analytics:${appCenterSdkVersion}" 
+    implementation "com.microsoft.appcenter:appcenter-crashes:${appCenterSdkVersion}" 
 }
 
 def jacocoVersion = "0.8.7"
@@ -271,3 +277,11 @@ tasks.withType(Test) {
 repositories {
     mavenCentral()
 }
+
+
+dependencies {
+    def appCenterSdkVersion = '4.4.5'
+    implementation "com.microsoft.appcenter:appcenter-analytics:${appCenterSdkVersion}"
+    implementation "com.microsoft.appcenter:appcenter-crashes:${appCenterSdkVersion}"
+}
+

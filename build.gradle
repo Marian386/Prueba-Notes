@@ -29,8 +29,8 @@ buildscript {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.8.0"
     }
     // Exclude the version that the android plugin depends on.
-    configurations.classpath.exclude group: 'com.android.tools.external.lombok'
-}
+    configurations.classpath.exclude group: 'com.android.tools.external.lombok' 
+} 
 
 allprojects {
     repositories {
@@ -57,3 +57,5 @@ sonarqube {
         property 'sonar.test.exclusions', '**/src/test/**/*.*,**/src/androidTest/**/*.*'
     }
 }
+
+

@@ -80,6 +80,10 @@ import java.util.HashMap;
 import lombok.Getter;
 import lombok.Setter;
 
+import com.microsoft.appcenter.AppCenter;
+import com.microsoft.appcenter.analytics.Analytics;
+import com.microsoft.appcenter.crashes.Crashes; 
+
 
 public class MainActivity extends BaseActivity implements
     SharedPreferences.OnSharedPreferenceChangeListener {
@@ -108,7 +112,10 @@ public class MainActivity extends BaseActivity implements
     EventBus.getDefault().register(this);
     Prefs.getPreferences().registerOnSharedPreferenceChangeListener(this);
 
-    initUI();
+    initUI(); 
+
+    AppCenter.start(getApplication(), "c1145493-5cf7-47b1-a334-e73d89d43996",
+                  Analytics.class, Crashes.class); 
   }
 
   @Override
