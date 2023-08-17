@@ -115,7 +115,7 @@ public class MainActivity extends BaseActivity implements
     initUI(); 
 
     AppCenter.start(getApplication(), "c1145493-5cf7-47b1-a334-e73d89d43996",
-                  Analytics.class, Crashes.class); 
+                  Analytics.class, Crashes.class);  
   }
 
   @Override
